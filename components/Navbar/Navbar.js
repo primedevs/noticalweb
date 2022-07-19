@@ -17,7 +17,7 @@ export default function Navbar() {
           </Link>
         </div>
         <Link href="/contact">
-          <button className={styles.cta_button}>Let's Talk</button>
+          <button className={styles.cta_button}>Let&apos;s Talk</button>
         </Link>
       </div>
     </div>
