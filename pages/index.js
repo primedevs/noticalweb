@@ -78,7 +78,7 @@ export default function Home() {
 
       <div className={styles.home_section_5}>
         <div className={styles.home_section_5_container}>
-          <p>Let's connect</p>
+          <p>Let&apos;s connect</p>
           <div className={styles.icons_container}>
             <Link href="https://twitter.com/primedevsco">
               <Twitter
