@@ -45,7 +45,7 @@ export default function Home() {
           <h4>Here's what you can build</h4>
           <div className={styles.services_container}>
             {services.map((service) => (
-              <Service service={service} />
+              <Service service={service} key={service._id.toString()} />
             ))}
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function Home() {
           <h4>Our work</h4>
           <div className={styles.our_work_container}>
             {projects.map((project) => (
-              <Project project={project} />
+              <Project project={project} key={project._id.toString()} />
             ))}
           </div>
         </div>
