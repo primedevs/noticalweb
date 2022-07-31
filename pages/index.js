@@ -38,7 +38,7 @@ export default function Home() {
             gutterBottom
             component="div"
           >
-            Launch faster with,
+            Launch Faster With
             <br />{" "}
             <Typography
               variant="h3"
