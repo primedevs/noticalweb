@@ -38,7 +38,7 @@ export default function Test() {
               multiline
               minRows={4}
             />
-            <Button size="small" variant="contained" disableElevation>
+            <Button size="medium" variant="contained" disableElevation>
               Send message
             </Button>
           </CardContent>

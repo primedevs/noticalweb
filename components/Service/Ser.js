@@ -11,13 +11,17 @@ export default function OutlinedCard(props) {
     <Box sx={{ minWidth: 275 }} variant="outlined">
       <Card variant="none" sx={{ height: 1 }}>
         <CardActionArea
-          sx={{ display: "flex", flexDirection: "row", height: 1 }}
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            height: 1,
+            verticalAlign: "top",
+          }}
         >
           <CardContent
             sx={{
               display: "flex",
               flexDirection: "column",
-              verticalAlign: "top",
             }}
           >
             <Typography variant="h5">{Icon}</Typography>
