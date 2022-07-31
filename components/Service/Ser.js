@@ -14,26 +14,17 @@ export default function OutlinedCard(props) {
           sx={{
             display: "flex",
             flexDirection: "row",
-            height: 1,
             verticalAlign: "top",
           }}
         >
-          <CardContent
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Typography variant="h5">{Icon}</Typography>
-          </CardContent>
           <CardContent sx={{ display: "flex", flexDirection: "column" }}>
             <Typography
-              variant="subtitle1"
-              sx={{ fontWeight: 500 }}
+              variant="h6"
+              sx={{ fontWeight: 400 }}
               gutterBottom
               component="div"
             >
-              {Title}
+              {`${Icon}   \u00A0\ ${Title}`}
             </Typography>
 
             <Typography
