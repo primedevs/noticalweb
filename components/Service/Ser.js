@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
 export default function OutlinedCard(props) {
-  const { Title, Icon, Description } = props.service;
+  const { Title, Icon, Description } = props.service || undefined;
   return (
     <Box sx={{ minWidth: 275 }} variant="outlined">
       <Card variant="none" sx={{ height: 1 }}>

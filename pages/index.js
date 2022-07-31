@@ -2,11 +2,8 @@ import Head from "next/head";
 import styles from "./Index.module.scss";
 import services from "../data/index/services.json";
 import projects from "../data/index/projects.json";
-import Service from "../components/Service/Service";
 import Ser from "../components/Service/Ser";
-import Project from "../components/Project/Project";
 import Pr from "../components/Project/Pr";
-import { Facebook, Twitter, Linkedin, Instagram } from "react-feather";
 import Link from "next/link";
 import Modal from "react-modal";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
@@ -160,10 +157,6 @@ export default function Home() {
           </Link>
         </div>
       </div>
-
-      <Modal isOpen={false}>
-        <Project />
-      </Modal>
     </div>
   );
 }
