@@ -1,12 +1,22 @@
 import Head from "next/head";
 import styles from "./Index.module.scss";
-import Navbar from "../components/Navbar/Navbar";
 import services from "../data/index/services.json";
 import projects from "../data/index/projects.json";
 import Service from "../components/Service/Service";
+import Ser from "../components/Service/Ser";
 import Project from "../components/Project/Project";
+import Pr from "../components/Project/Pr";
 import { Facebook, Twitter, Linkedin, Instagram } from "react-feather";
 import Link from "next/link";
+import Modal from "react-modal";
+import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
+
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+
+import { useRouter } from "next/router";
+Modal.setAppElement("#__next");
+
 const colors = {
   green: "#04A54A",
 };
@@ -22,30 +32,66 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
 
       <div className={styles.home_section_1}>
         <div className={styles.home_section_1_container}>
-          <h1>
-            Launch your product in days,
-            <br /> not months.
-          </h1>
-          <p>
-            We&apos;re a young and talented team of developers ready to take on your
-            next big idea. We use bubble.io to develop amazing websites and
+          <Typography
+            variant="h2"
+            fontWeight={700}
+            gutterBottom
+            component="div"
+          >
+            Launch faster with,
+            <br />{" "}
+            <Typography
+              variant="h2"
+              component="div"
+              fontWeight={700}
+              color="primary"
+            >
+              No Code!
+            </Typography>
+          </Typography>
+
+          <Typography
+            variant="body1"
+            maxWidth={700}
+            gutterBottom
+            component="div"
+            color="text.secondary"
+          >
+            We&apos;re a young and talented team of developers ready to take on
+            your next big idea. We use bubble.io to develop amazing websites and
             digital products for startups, companies and ourselves. Want to work
             with an awesome team and build your product? Let&apos;s talk!
-          </p>
-          <button>Explore works</button>
+          </Typography>
+          <Link href="/contact">
+            <Button
+              variant="contained"
+              disableElevation
+              size="medium"
+              endIcon={<ChevronRightRoundedIcon />}
+            >
+              Get Started
+            </Button>
+          </Link>
         </div>
       </div>
 
       <div className={styles.home_section_2}>
         <div className={styles.home_section_2_container}>
-          <h4>Here&apos;s what you can build</h4>
+          <Typography
+            variant="h4"
+            sx={{ fontWeight: 500 }}
+            gutterBottom
+            component="div"
+          >
+            Here&apos;s what you can build
+          </Typography>
+
           <div className={styles.services_container}>
             {services.map((service) => (
-              <Service service={service} key={service._id.toString()} />
+              <Ser service={service} key={service._id.toString()} />
             ))}
           </div>
         </div>
@@ -53,10 +99,25 @@ export default function Home() {
 
       <div className={styles.home_section_3}>
         <div className={styles.home_section_3_container}>
-          <h4>Our work</h4>
+          <Typography
+            variant="h4"
+            sx={{ fontWeight: 500 }}
+            gutterBottom
+            component="div"
+          >
+            Our work
+          </Typography>
           <div className={styles.our_work_container}>
             {projects.map((project) => (
-              <Project project={project} key={project._id.toString()} />
+              <Link
+                href={`/?[projectId]?projectId=${project._id}`}
+                as={`/project/${project._id}`}
+                scroll={false}
+              >
+                <a>
+                  <Pr project={project} key={project._id.toString()} />
+                </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -66,59 +127,42 @@ export default function Home() {
         <div className={styles.home_section_4_container}>
           <div className={styles.available_for_projects}>
             <div> </div>
-            <p>AVAILABLE FOR FREELANCE PROJECTS</p>
+            <Typography color="text.primary" fontWeight={300}>
+              AVAILABLE FOR FREELANCE PROJECTS
+            </Typography>
           </div>
-          <h2>
+
+          <Typography
+            textAlign="center"
+            variant="h4"
+            gutterBottom
+            component="div"
+            fontWeight={500}
+          >
+            {" "}
             Need help with your
-            <br /> <span>Bubble project?</span> Let&apos;s talk.
-          </h2>
-          <button>Let&apos;schat now</button>
+            <br />{" "}
+            <Typography
+              variant="h4"
+              gutterBottom
+              component="div"
+              fontWeight={500}
+              color="primary"
+            >
+              Bubble project?
+            </Typography>{" "}
+          </Typography>
+          <Link href="/contact">
+            <Button size="medium" variant="contained" disableElevation>
+              Contact us
+            </Button>
+          </Link>
         </div>
       </div>
 
-      <div className={styles.home_section_5}>
-        <div className={styles.home_section_5_container}>
-          <p>Let&apos;s connect</p>
-          <div className={styles.icons_container}>
-            <Link href="https://twitter.com/primedevsco">
-              <Twitter
-                height="30"
-                width="30"
-                strokeWidth="1.4"
-                stroke={colors.green}
-                className={styles.linkz}
-              />
-            </Link>
-            <Link href="https://web.facebook.com/primedevsco">
-              <Facebook
-                height="30"
-                width="30"
-                strokeWidth="1.4"
-                stroke={colors.green}
-                className={styles.linkz}
-              />
-            </Link>
-            <Link href="https://www.instagram.com/primedevs/">
-              <Instagram
-                height="30"
-                width="30"
-                strokeWidth="1.4"
-                stroke={colors.green}
-                className={styles.linkz}
-              />
-            </Link>
-            <Link href="https://linkedin.com/company/primedevs">
-              <Linkedin
-                height="30"
-                width="30"
-                strokeWidth="1.4"
-                stroke={colors.green}
-                className={styles.linkz}
-              />
-            </Link>
-          </div>
-        </div>
-      </div>
+      <Modal isOpen={false}>
+        <Project />
+      </Modal>
     </div>
   );
 }

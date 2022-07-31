@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Service.module.scss";
+
 export default function Service(props) {
   const { Title, Icon, Description } = props.service;
   return (
