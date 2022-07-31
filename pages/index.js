@@ -113,9 +113,10 @@ export default function Home() {
                 href={`/?[projectId]?projectId=${project._id}`}
                 as={`/project/${project._id}`}
                 scroll={false}
+                key={project._id.toString()}
               >
                 <a>
-                  <Pr project={project} key={project._id.toString()} />
+                  <Pr project={project} />
                 </a>
               </Link>
             ))}
