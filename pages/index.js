@@ -151,7 +151,7 @@ export default function Home() {
             </Typography>{" "}
           </Typography>
           <Link href="/contact">
-            <Button size="medium" variant="contained" disableElevation>
+            <Button size="small" variant="contained" disableElevation>
               Contact us
             </Button>
           </Link>

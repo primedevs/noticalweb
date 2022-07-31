@@ -3,7 +3,7 @@ let theme = createTheme({
   typography: {
     button: {
       textTransform: "none",
-      borderRadius: 84,
+      textDecoration: "none",
     },
   },
   palette: {

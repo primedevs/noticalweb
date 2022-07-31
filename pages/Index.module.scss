@@ -8,6 +8,7 @@
 
 .home_section_1 {
   padding-bottom: 100px;
+  padding-top: 70px;
   border-bottom: 1px $grey_200 solid;
   .home_section_1_container {
     padding-top: 70px;
@@ -136,7 +137,6 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-   
 
     .available_for_projects {
       display: flex;
@@ -149,7 +149,6 @@
         width: 15px;
         border-radius: 10px;
       }
-  
     }
     h2 {
       @include h5();
@@ -167,6 +166,5 @@
         color: $green_main;
       }
     }
-
   }
 }
