@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "./Index.module.scss";
+import styles from "../styles/Home.module.scss";
 import services from "../data/index/services.json";
 import projects from "../data/index/projects.json";
 import Ser from "../components/Service/Ser";
@@ -11,7 +11,15 @@ import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
-import { useRouter } from "next/router";
+const myStyles = {
+  myTextStyle: {
+    textDecoration: "none",
+    "&:hover": {
+      color: "secondary",
+    },
+  },
+};
+import { Stack } from "@mui/material";
 Modal.setAppElement("#__next");
 
 const colors = {
@@ -33,7 +41,7 @@ export default function Home() {
       <div className={styles.home_section_1}>
         <div className={styles.home_section_1_container}>
           <Typography
-            variant="h3"
+            variant="h2"
             fontWeight={800}
             gutterBottom
             component="div"
@@ -51,25 +59,28 @@ export default function Home() {
           </Typography>
 
           <Typography
-            variant="body1"
-            maxWidth={700}
+            variant="subtitle1"
             gutterBottom
             component="div"
-            color="text.secondary"
+            sx={{
+              textAlign: "center",
+              maxWidth: 600,
+              alignSelf: "center",
+            }}
           >
             We&apos;re a young and talented team of developers ready to take on
             your next big idea. We use bubble.io to develop amazing websites and
             digital products for startups, companies and ourselves. Want to work
             with an awesome team and build your product? Let&apos;s talk!
           </Typography>
-          <Link href="/contact">
+          <Link href="/projects">
             <Button
               variant="contained"
               disableElevation
               size="medium"
               endIcon={<ChevronRightRoundedIcon />}
             >
-              Get Started
+              See what we&apos;ve built
             </Button>
           </Link>
         </div>
@@ -96,14 +107,24 @@ export default function Home() {
 
       <div className={styles.home_section_3}>
         <div className={styles.home_section_3_container}>
-          <Typography
-            variant="h4"
-            sx={{ fontWeight: 500 }}
-            gutterBottom
-            component="div"
+          <Stack
+            direction="row"
+            justifyContent="space-between"
+            alignItems="center"
           >
-            Our work
-          </Typography>
+            <Typography
+              variant="h4"
+              sx={{ fontWeight: 500 }}
+              gutterBottom
+              component="div"
+            >
+              Our work
+            </Typography>{" "}
+            <Typography variant="body1" gutterBottom sx={{}}>
+              See more 👉
+            </Typography>
+          </Stack>
+
           <div className={styles.our_work_container}>
             {projects.map((project) => (
               <Link
@@ -132,27 +153,27 @@ export default function Home() {
 
           <Typography
             textAlign="center"
-            variant="h4"
+            variant="h3"
             gutterBottom
             component="div"
-            fontWeight={500}
+            fontWeight={800}
           >
             {" "}
             Need help with your
             <br />{" "}
             <Typography
-              variant="h4"
+              variant="h3"
               gutterBottom
               component="div"
-              fontWeight={500}
+              fontWeight={800}
               color="primary"
             >
               Bubble project?
             </Typography>{" "}
           </Typography>
-          <Link href="/contact">
+          <Link href="https://calendly.com/primedevs/bubble-development">
             <Button size="small" variant="contained" disableElevation>
-              Contact us
+              Schedule a Call
             </Button>
           </Link>
         </div>

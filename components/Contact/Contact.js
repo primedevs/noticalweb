@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Contact.module.scss";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+
 import { Card, CardContent, Typography } from "@mui/material";
 export default function Test() {
   return (
@@ -18,6 +19,10 @@ export default function Test() {
               component="div"
             >
               Contact us
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum.
             </Typography>
             <TextField
               id="outlined-basic"

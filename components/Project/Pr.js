@@ -17,7 +17,7 @@ export default function MultiActionAreaCard(props) {
     "Preview link": previewLink,
   } = props.project || {};
   return (
-    <Card variant="outlined">
+    <Card variant="outlined" sx={{ borderRadius: 3}}>
       <CardActionArea>
         <CardMedia component="img" height="140" image={mainImage} alt={Name} />
         <CardContent>

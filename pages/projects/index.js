@@ -11,7 +11,7 @@ export default function index() {
     <div className={styles.projects}>
       <div className={styles.projects_container}>
         <Typography
-          variant="h5"
+          variant="h4"
           sx={{ fontWeight: 500 }}
           gutterBottom
           component="div"

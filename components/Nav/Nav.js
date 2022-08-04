@@ -3,8 +3,8 @@ import styles from "./Nav.module.scss";
 import Image from "next/image";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import { Button, Link } from "@mui/material";
-
+import { Button } from "@mui/material";
+import Link from "next/link";
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const [width, setWidth] = useState();
@@ -32,7 +32,9 @@ const Navbar = () => {
       }
       window.addEventListener("resize", handleResize);
       handleResize();
-      return () => window.removeEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
     }
   }, [width]);
 
@@ -41,16 +43,15 @@ const Navbar = () => {
       <div className={styles.navbar}>
         <div className={styles.container}>
           <div className={styles.container__logo}>
-            {" "}
             <Link href="/">
-              <Image src={"/logo.png"} layout={"fill"} objectFit={"contain"} />{" "}
+              <Image src={"/logo.png"} layout={"fill"} objectFit={"contain"} />
             </Link>
           </div>
 
           <div className={menuClasses()}>
             <ul>
               <li>
-                <Link href="/team" style={{ textDecoration: "none" }}>
+                <Link href="/team">
                   <Button
                     variant="text"
                     onClick={handleClick}
@@ -61,7 +62,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" style={{ textDecoration: "none" }}>
+                <Link href="/contact">
                   <Button
                     variant="text"
                     onClick={handleClick}
@@ -72,7 +73,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/projects" style={{ textDecoration: "none" }}>
+                <Link href="/projects">
                   <Button
                     variant="contained"
                     onClick={handleClick}
