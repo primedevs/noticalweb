@@ -23,7 +23,6 @@ export default function Footer() {
 
         <Stack
           direction="row"
-          divider={<Divider orientation="vertical" flexItem />}
           spacing={1}
         >
           <Link href="https://twitter.com/primedevsco">
