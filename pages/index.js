@@ -41,7 +41,7 @@ export default function Home() {
       <div className={styles.home_section_1}>
         <div className={styles.home_section_1_container}>
           <Typography
-            variant="h3"
+            variant="h4"
             fontWeight={800}
             gutterBottom
             component="div"
@@ -49,7 +49,7 @@ export default function Home() {
             Launch Faster With
             <br />{" "}
             <Typography
-              variant="h3"
+              variant="h4"
               component="div"
               fontWeight={800}
               color="primary"
