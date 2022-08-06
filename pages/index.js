@@ -41,7 +41,7 @@ export default function Home() {
       <div className={styles.home_section_1}>
         <div className={styles.home_section_1_container}>
           <Typography
-            variant="h2"
+            variant="h3"
             fontWeight={800}
             gutterBottom
             component="div"
