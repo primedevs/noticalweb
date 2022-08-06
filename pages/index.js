@@ -7,7 +7,6 @@ import Pr from "../components/Project/Pr";
 import Link from "next/link";
 import Modal from "react-modal";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
-
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
@@ -119,10 +118,12 @@ export default function Home() {
               component="div"
             >
               Our work
-            </Typography>{" "}
-            <Typography variant="body1" gutterBottom sx={{}}>
-              See more 👉
             </Typography>
+            <Link href="/projects">
+              <Typography variant="body1" gutterBottom sx={{cursor: 'pointer'}}>
+                See more 👉
+              </Typography>
+            </Link>
           </Stack>
 
           <div className={styles.our_work_container}>

@@ -44,7 +44,12 @@ const Navbar = () => {
         <div className={styles.container}>
           <div className={styles.container__logo}>
             <Link href="/">
-              <Image src={"/logo.png"} layout={"fill"} objectFit={"contain"} />
+              <Image
+                src={"/logo.png"}
+                layout={"fill"}
+                objectFit={"contain"}
+                onClick={handleClick}
+              />
             </Link>
           </div>
 
