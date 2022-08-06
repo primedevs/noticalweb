@@ -41,17 +41,17 @@ export default function Home() {
       <div className={styles.home_section_1}>
         <div className={styles.home_section_1_container}>
           <Typography
-            variant="h4"
-            fontWeight={800}
+            variant="h3"
+            fontWeight={900}
             gutterBottom
             component="div"
           >
             Launch Faster With
             <br />{" "}
             <Typography
-              variant="h4"
+              variant="h3"
               component="div"
-              fontWeight={800}
+              fontWeight={900}
               color="primary"
             >
               No Code!
