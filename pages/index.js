@@ -67,7 +67,7 @@ export default function Home() {
               alignSelf: "center",
             }}
           >
-            We&apos;re a young and talented team of developers ready to take on
+            We&apos;re a talented team of developers ready to take on
             your next big idea. We use bubble.io to develop amazing websites and
             digital products for startups, companies and ourselves. Want to work
             with an awesome team and build your product? Let&apos;s talk!
