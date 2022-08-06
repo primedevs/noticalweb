@@ -48,7 +48,6 @@ const Navbar = () => {
                 src={"/logo.png"}
                 layout={"fill"}
                 objectFit={"contain"}
-                onClick={setMenu(false)}
               />
             </Link>
           </div>
