@@ -21,8 +21,7 @@ export default function index() {
         <div className={styles.our_work_container}>
           {projects.map((project) => (
             <Link
-              href={`/projects/?[projectId]?projectId=${project._id}`}
-              as={`/project/${project._id}`}
+              href={`/project/${project._id}`}
               scroll={false}
               key={project._id.toString()}
             >

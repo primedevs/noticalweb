@@ -39,7 +39,7 @@ export default function MultiActionAreaCard(props) {
             size="small"
             sx={{ marginTop: 2 }}
           />
-        </CardContent>{" "}
+        </CardContent>
       </CardActionArea>
     </Card>
   );

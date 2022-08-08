@@ -5,25 +5,10 @@ import projects from "../data/index/projects.json";
 import Ser from "../components/Service/Ser";
 import Pr from "../components/Project/Pr";
 import Link from "next/link";
-import Modal from "react-modal";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-
-const myStyles = {
-  myTextStyle: {
-    textDecoration: "none",
-    "&:hover": {
-      color: "secondary",
-    },
-  },
-};
 import { Stack } from "@mui/material";
-Modal.setAppElement("#__next");
-
-const colors = {
-  green: "#04A54A",
-};
 
 export default function Home() {
   return (
@@ -36,7 +21,6 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <div className={styles.home_section_1}>
         <div className={styles.home_section_1_container}>
           <Typography
@@ -67,10 +51,10 @@ export default function Home() {
               alignSelf: "center",
             }}
           >
-            We&apos;re a talented team of developers ready to take on
-            your next big idea. We use bubble.io to develop amazing websites and
-            digital products for startups, companies and ourselves. Want to work
-            with an awesome team and build your product? Let&apos;s talk!
+            We&apos;re a talented team of developers ready to take on your next
+            big idea. We use bubble.io to develop amazing websites and digital
+            products for startups, companies and ourselves. Want to work with an
+            awesome team and build your product? Let&apos;s talk!
           </Typography>
           <Link href="/projects">
             <Button
@@ -84,7 +68,6 @@ export default function Home() {
           </Link>
         </div>
       </div>
-
       <div className={styles.home_section_2}>
         <div className={styles.home_section_2_container}>
           <Typography
@@ -103,7 +86,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div className={styles.home_section_3}>
         <div className={styles.home_section_3_container}>
           <Stack
@@ -120,7 +102,11 @@ export default function Home() {
               Our work
             </Typography>
             <Link href="/projects">
-              <Typography variant="body1" gutterBottom sx={{cursor: 'pointer'}}>
+              <Typography
+                variant="body1"
+                gutterBottom
+                sx={{ cursor: "pointer" }}
+              >
                 See more 👉
               </Typography>
             </Link>
@@ -129,9 +115,7 @@ export default function Home() {
           <div className={styles.our_work_container}>
             {projects.map((project) => (
               <Link
-                href={`/?[projectId]?projectId=${project._id}`}
-                as={`/project/${project._id}`}
-                scroll={false}
+                href={`/project/${project._id}`}
                 key={project._id.toString()}
               >
                 <a>
@@ -142,12 +126,15 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       <div className={styles.home_section_4}>
         <div className={styles.home_section_4_container}>
           <div className={styles.available_for_projects}>
             <div> </div>
-            <Typography color="text.primary" fontWeight={300}>
+            <Typography
+              color="text.primary.300"
+              fontWeight={300}
+              variant="body1"
+            >
               AVAILABLE FOR FREELANCE PROJECTS
             </Typography>
           </div>
@@ -159,9 +146,8 @@ export default function Home() {
             component="div"
             fontWeight={800}
           >
-            {" "}
             Need help with your
-            <br />{" "}
+            <br />
             <Typography
               variant="h3"
               gutterBottom
