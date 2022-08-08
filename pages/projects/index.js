@@ -22,7 +22,6 @@ export default function index() {
           {projects.map((project) => (
             <Link
               href={`/project/${project._id}`}
-              scroll={false}
               key={project._id.toString()}
             >
               <a>
