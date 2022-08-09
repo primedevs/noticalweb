@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
-import services from "../data/index/services.json";
-import projects from "../data/index/projects.json";
+import serviceData from "../data/index/services.json";
+import projectData from "../data/index/projects.json";
 import Ser from "../components/Service/Ser";
 import Pr from "../components/Project/Pr";
 import Link from "next/link";
@@ -10,15 +10,16 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Stack } from "@mui/material";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <div className={styles.container}>
       <Head>
         <title>Primedevs</title>
         <meta
-          name="Primedevs"
+          name="description"
           content="Launch faster with no-code tools. It saves you time, money & gives a professional finish."
         />
+        <meta property="og:url" content="https://www.primedevs.co" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.home_section_1}>
@@ -81,7 +82,7 @@ export default function Home() {
           </Typography>
 
           <div className={styles.services_container}>
-            {services.map((service) => (
+            {props.services.map((service) => (
               <Ser service={service} key={service._id.toString()} />
             ))}
           </div>
@@ -114,7 +115,7 @@ export default function Home() {
           </Stack>
 
           <div className={styles.our_work_container}>
-            {projects.map((project) => (
+            {props.projects.map((project) => (
               <Link
                 href={`/project/${project._id}`}
                 key={project._id.toString()}
@@ -173,4 +174,21 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps(context) {
+  if (!projectData) {
+    return {
+      notFound: true,
+    };
+  }
+  if (!serviceData) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: { projects: projectData, services: serviceData }, // will be passed to the page component as props
+  };
 }

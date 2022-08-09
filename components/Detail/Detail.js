@@ -1,5 +1,4 @@
 import * as React from "react";
-import Link from "next/link";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -15,7 +14,7 @@ export default function Detail(props) {
   const router = useRouter();
   const projectData =
     projects.find((project) => project._id == props.identifier) || {};
-  const { ["Preview Link"]: projectLink } = projectData;
+  const { ["Preview Link"]: projectLink, Description } = projectData;
   return (
     <Card
       variant="none"
@@ -115,28 +114,7 @@ export default function Detail(props) {
               About project
             </Typography>
             <Typography variant="body1" gutterBottom color="text.secondary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu
-              bibendum at varius vel pharetra vel turpis nunc eget. Consectetur
-              adipiscing elit duis tristique sollicitudin nibh. Magna sit amet
-              purus gravida quis blandit turpis cursus in. Erat velit
-              scelerisque in dictum non consectetur a. Semper auctor neque vitae
-              tempus quam pellentesque. Parturient montes nascetur ridiculus mus
-              mauris. Id cursus metus aliquam eleifend. Eget mauris pharetra et
-              ultrices neque ornare aenean euismod. Eget lorem dolor sed viverra
-              ipsum nunc aliquet. Laoreet sit amet cursus sit amet dictum. Felis
-              eget nunc lobortis mattis aliquam faucibus purus. Felis eget velit
-              aliquet sagittis id consectetur. Nibh tortor id aliquet lectus
-              proin nibh nisl condimentum id. Id venenatis a condimentum vitae
-              sapien pellentesque habitant morbi. Nunc consequat interdum varius
-              sit amet mattis vulputate. Aliquet nibh praesent tristique magna
-              sit amet purus gravida. Eget nunc scelerisque viverra mauris in
-              aliquam sem fringilla. Eget aliquet nibh praesent tristique magna
-              sit amet purus. Et ligula ullamcorper malesuada proin libero nunc
-              consequat. Molestie a iaculis at erat pellentesque adipiscing
-              commodo elit. Pellentesque pulvinar pellentesque habitant morbi
-              tristique senectus et. Pharetra magna ac placerat vestibulum.
-              Malesuada fames ac turpis egestas sed tempus urna et.
+              {Description}
             </Typography>
           </CardContent>
         </Stack>
@@ -144,3 +122,16 @@ export default function Detail(props) {
     </Card>
   );
 }
+
+export async function getStaticProps(context) {
+  if (!projectData) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: { projects: projectData }, // will be passed to the page component as props
+  };
+}
+

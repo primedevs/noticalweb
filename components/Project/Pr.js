@@ -15,9 +15,10 @@ export default function MultiActionAreaCard(props) {
     "Client logo": clientLogo,
     Type,
     "Preview link": previewLink,
+    "Short Description": miniDescription,
   } = props.project || {};
   return (
-    <Card variant="outlined" sx={{ borderRadius: 3}}>
+    <Card variant="outlined" sx={{ borderRadius: 3 }}>
       <CardActionArea>
         <CardMedia component="img" height="140" image={mainImage} alt={Name} />
         <CardContent>
@@ -30,9 +31,8 @@ export default function MultiActionAreaCard(props) {
             component="div"
             gutterBottom
           >
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>{" "}
+            {miniDescription}
+          </Typography>
           <Chip
             label={Type}
             color="primary"
