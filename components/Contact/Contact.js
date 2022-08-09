@@ -43,7 +43,12 @@ export default function Test() {
               multiline
               minRows={4}
             />
-            <Button size="medium" variant="contained" disableElevation>
+            <Button
+              size="medium"
+              variant="contained"
+              disableElevation
+              sx={{ borderRadius: 2 }}
+            >
               Send message
             </Button>
           </CardContent>

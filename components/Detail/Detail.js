@@ -1,30 +1,27 @@
 import * as React from "react";
+import Link from "next/link";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { useRouter } from "next/router";
-import {
-  Button,
-  Stack,
-  CardActions,
-  CardActionArea,
-  Avatar,
-  Chip,
-} from "@mui/material";
+import { Button, Stack, CardActionArea, Avatar, Chip } from "@mui/material";
 import WestRoundedIcon from "@mui/icons-material/WestRounded";
+import LaunchRoundedIcon from "@mui/icons-material/LaunchRounded";
+import FiberManualRecordRoundedIcon from "@mui/icons-material/FiberManualRecordRounded";
 import projects from "../../data/index/projects.json";
 
 export default function Detail(props) {
   const router = useRouter();
   const projectData =
     projects.find((project) => project._id == props.identifier) || {};
+  const { ["Preview Link"]: projectLink } = projectData;
   return (
     <Card
       variant="none"
       sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
     >
-      <Stack direction="column" spacing={2} alignItems="center" maxWidth={700}>
+      <Stack direction="column" spacing={2} alignItems="center" maxWidth={900}>
         <Stack width={1}>
           <Stack direction="column" width={1}>
             <Stack
@@ -54,14 +51,35 @@ export default function Detail(props) {
                 Back
               </Typography>
             </Stack>
-            <Typography variant="h2" gutterBottom component="div" >
-              {projectData.Name}
-            </Typography>
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent="space-between"
+            >
+              <Typography variant="h2" gutterBottom component="div">
+                {projectData.Name}
+              </Typography>
+              <a href={projectLink}>
+                <Button
+                  variant="none"
+                  size="small"
+                  endIcon={<LaunchRoundedIcon color="secondary" />}
+                  sx={{ maxHeight: "35px", color: "#616161", borderRadius: 2 }}
+                >
+                  Preview
+                </Button>
+              </a>
+            </Stack>
+
             <Stack direction="row" spacing={1} alignItems="center">
               <Avatar
                 alt="Company logo"
                 src={projectData["Client logo"]}
                 sx={{ height: "26px", width: "26px" }}
+              />
+              <FiberManualRecordRoundedIcon
+                fontSize="small"
+                sx={{ height: "5px", width: "5px", color: "#616161" }}
               />
               <Typography
                 variant="subtitle2"
@@ -71,6 +89,10 @@ export default function Detail(props) {
               >
                 {projectData.Client}
               </Typography>
+              <FiberManualRecordRoundedIcon
+                fontSize="small"
+                sx={{ height: "5px", width: "5px", color: "#616161" }}
+              />
               <Chip label={projectData.Type} size="small" />
             </Stack>
           </Stack>
@@ -85,14 +107,14 @@ export default function Detail(props) {
               borderRadius: "10px",
               border: 1,
               borderColor: "#eceff1",
-              maxHeight: "600px",
+              maxHeight: "500px",
             }}
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               About project
             </Typography>
-            <Typography variant="body1" color="text.secondary">
+            <Typography variant="body1" gutterBottom color="text.secondary">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu
               bibendum at varius vel pharetra vel turpis nunc eget. Consectetur

@@ -9,7 +9,11 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const [width, setWidth] = useState();
   const handleClick = () => setMenu(!menu);
-
+  const handleClickLogo = () => {
+    if (menu) {
+      setMenu(!menu);
+    }
+  };
   const menuClasses = () => {
     if (width <= 599) {
       const classes = menu ? styles.menu : styles.menu__mobile__inactive;
@@ -45,6 +49,7 @@ const Navbar = () => {
           <div className={styles.container__logo}>
             <Link href="/">
               <Image
+                onClick={handleClickLogo}
                 src={"/logo.png"}
                 layout={"fill"}
                 objectFit={"contain"}
@@ -60,6 +65,7 @@ const Navbar = () => {
                     variant="text"
                     onClick={handleClick}
                     color="secondary"
+                    sx={{ borderRadius: 2 }}
                   >
                     Team
                   </Button>
@@ -71,6 +77,7 @@ const Navbar = () => {
                     variant="text"
                     onClick={handleClick}
                     color="secondary"
+                    sx={{ borderRadius: 2 }}
                   >
                     Contact
                   </Button>
@@ -84,6 +91,7 @@ const Navbar = () => {
                     color="primary"
                     size="small"
                     disableElevation
+                    sx={{ borderRadius: 2 }}
                   >
                     Projects
                   </Button>

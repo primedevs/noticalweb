@@ -30,7 +30,7 @@ export default function Home() {
             component="div"
           >
             Launch Faster With
-            <br />{" "}
+            <br />
             <Typography
               variant="h3"
               component="div"
@@ -58,6 +58,7 @@ export default function Home() {
           </Typography>
           <Link href="/projects">
             <Button
+              sx={{ borderRadius: 2 }}
               variant="contained"
               disableElevation
               size="medium"
@@ -133,7 +134,7 @@ export default function Home() {
             <Typography
               color="text.primary.300"
               fontWeight={300}
-              variant="body1"
+              variant="body2"
             >
               AVAILABLE FOR FREELANCE PROJECTS
             </Typography>
@@ -159,7 +160,12 @@ export default function Home() {
             </Typography>{" "}
           </Typography>
           <Link href="https://calendly.com/primedevs/bubble-development">
-            <Button size="small" variant="contained" disableElevation>
+            <Button
+              size="small"
+              variant="contained"
+              disableElevation
+              sx={{ borderRadius: 2 }}
+            >
               Schedule a Call
             </Button>
           </Link>
