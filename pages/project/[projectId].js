@@ -17,7 +17,10 @@ export default function Project() {
       <Head>
         <title>{projectData["Name"]}</title>
         <meta name="description" content={projectData["Short Description"]} />
-        <meta property="og:url" content="https://www.primedevs.co/team" />
+        <meta
+          property="og:url"
+          content={`https://www.primedevs.co/project/${projectId}`}
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.project_container}>
