@@ -65,7 +65,7 @@ export default function Home(props) {
               size="medium"
               endIcon={<ChevronRightRoundedIcon />}
             >
-              See what we&apos;ve builtt
+              See what we&apos;ve built
             </Button>
           </Link>
         </div>
