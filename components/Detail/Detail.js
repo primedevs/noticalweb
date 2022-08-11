@@ -5,7 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { useRouter } from "next/router";
 import { Button, Stack, CardActionArea, Avatar, Chip } from "@mui/material";
-import WestRoundedIcon from "@mui/icons-material/WestRounded";
+import ChevronLeftRoundedIcon from '@mui/icons-material/ChevronLeftRounded';
 import LaunchRoundedIcon from "@mui/icons-material/LaunchRounded";
 import FiberManualRecordRoundedIcon from "@mui/icons-material/FiberManualRecordRounded";
 import projects from "../../data/index/projects.json";
@@ -28,7 +28,7 @@ export default function Detail(props) {
               spacing={1}
               alignItems="center"
               onClick={() => router.back()}
-              sx={{ cursor: "pointer" }}
+              sx={{ cursor: "pointer" , paddingBottom: 1.5}}
             >
               <Card
                 variant="none"
@@ -43,7 +43,7 @@ export default function Detail(props) {
                     alignItems: "center",
                   }}
                 >
-                  <WestRoundedIcon fontSize="medium" />
+                  <ChevronLeftRoundedIcon fontSize="medium" />
                 </CardActionArea>
               </Card>
               <Typography variant="body1" gutterBottom component="div">

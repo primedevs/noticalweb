@@ -5,7 +5,6 @@ import projectData from "../data/index/projects.json";
 import Ser from "../components/Service/Ser";
 import Pr from "../components/Project/Pr";
 import Link from "next/link";
-import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Stack } from "@mui/material";
@@ -38,7 +37,7 @@ export default function Home(props) {
               fontWeight={900}
               color="primary"
             >
-              No Code!
+              No code!
             </Typography>
           </Typography>
 
@@ -46,6 +45,7 @@ export default function Home(props) {
             variant="subtitle1"
             gutterBottom
             component="div"
+            color="#424242"
             sx={{
               textAlign: "center",
               maxWidth: 600,
@@ -59,13 +59,12 @@ export default function Home(props) {
           </Typography>
           <Link href="/projects">
             <Button
-              sx={{ borderRadius: 2 }}
+              size="small"
               variant="contained"
               disableElevation
-              size="medium"
-              endIcon={<ChevronRightRoundedIcon />}
+              sx={{ borderRadius: 2 }}
             >
-              See what we&apos;ve built
+              Explore Our Work
             </Button>
           </Link>
         </div>

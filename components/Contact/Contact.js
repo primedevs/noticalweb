@@ -49,7 +49,7 @@ export default function Test() {
               disableElevation
               sx={{ borderRadius: 2 }}
             >
-              Send message
+              Send us a message
             </Button>
           </CardContent>
         </Card>
