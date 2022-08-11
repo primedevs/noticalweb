@@ -8,7 +8,7 @@ let theme = createTheme({
   },
   palette: {
     primary: { 500: "#04A54A" },
-    secondary: { main: "#333333" },
+    secondary: { main: "#0B1929" },
   },
 });
 theme = responsiveFontSizes(theme);

@@ -17,86 +17,91 @@ export default function Footer() {
   return (
     <div className={styles.home_section_5}>
       <div className={styles.home_section_5_container}>
-        <Typography variant="subtitle2" gutterBottom component="div">
-          Let&apos;s Connect
-        </Typography>
+        <Stack>
+          <Typography
+            variant="subtitle2"
+            gutterBottom
+            component="div"
+            textAlign="center"
+            color="#424242"
+          >
+            Let&apos;s Connect
+          </Typography>
 
-        <Stack
-          direction="row"
-          spacing={1}
-        >
-          <Link href="https://twitter.com/primedevsco">
-            <Card
-              variant="outlined"
-              sx={{ width: "35px", height: "35px", borderRadius: "20px" }}
-            >
-              <CardActionArea
-                sx={{ display: "flex", alignItems: "center", height: 1 }}
+          <Stack direction="row" spacing={1}>
+            <Link href="https://twitter.com/primedevsco">
+              <Card
+                variant="outlined"
+                sx={{ width: "35px", height: "35px", borderRadius: "20px" }}
               >
-                <Twitter
-                  height="20"
-                  width="20"
-                  strokeWidth="2"
-                  stroke={colors.green}
-                  className={styles.linkz}
-                />
-              </CardActionArea>
-            </Card>
-          </Link>
-          <Link href="https://web.facebook.com/primedevsco">
-            <Card
-              variant="outlined"
-              sx={{ width: "35px", height: "35px", borderRadius: "20px" }}
-            >
-              <CardActionArea
-                sx={{ display: "flex", alignItems: "center", height: 1 }}
+                <CardActionArea
+                  sx={{ display: "flex", alignItems: "center", height: 1 }}
+                >
+                  <Twitter
+                    height="20"
+                    width="20"
+                    strokeWidth="2"
+                    stroke={colors.green}
+                    className={styles.linkz}
+                  />
+                </CardActionArea>
+              </Card>
+            </Link>
+            <Link href="https://web.facebook.com/primedevsco">
+              <Card
+                variant="outlined"
+                sx={{ width: "35px", height: "35px", borderRadius: "20px" }}
               >
-                <Facebook
-                  height="20"
-                  width="20"
-                  strokeWidth="2"
-                  stroke={colors.green}
-                  className={styles.linkz}
-                />
-              </CardActionArea>
-            </Card>
-          </Link>
-          <Link href="https://www.instagram.com/primedevs/">
-            <Card
-              variant="outlined"
-              sx={{ width: "35px", height: "35px", borderRadius: "20px" }}
-            >
-              <CardActionArea
-                sx={{ display: "flex", alignItems: "center", height: 1 }}
+                <CardActionArea
+                  sx={{ display: "flex", alignItems: "center", height: 1 }}
+                >
+                  <Facebook
+                    height="20"
+                    width="20"
+                    strokeWidth="2"
+                    stroke={colors.green}
+                    className={styles.linkz}
+                  />
+                </CardActionArea>
+              </Card>
+            </Link>
+            <Link href="https://www.instagram.com/primedevs/">
+              <Card
+                variant="outlined"
+                sx={{ width: "35px", height: "35px", borderRadius: "20px" }}
               >
-                <Instagram
-                  height="20"
-                  width="20"
-                  strokeWidth="2"
-                  stroke={colors.green}
-                  className={styles.linkz}
-                />
-              </CardActionArea>
-            </Card>
-          </Link>
-          <Link href="https://linkedin.com/company/primedevs">
-            <Card
-              variant="outlined"
-              sx={{ width: "35px", height: "35px", borderRadius: "20px" }}
-            >
-              <CardActionArea
-                sx={{ display: "flex", alignItems: "center", height: 1 }}
+                <CardActionArea
+                  sx={{ display: "flex", alignItems: "center", height: 1 }}
+                >
+                  <Instagram
+                    height="20"
+                    width="20"
+                    strokeWidth="2"
+                    stroke={colors.green}
+                    className={styles.linkz}
+                  />
+                </CardActionArea>
+              </Card>
+            </Link>
+            <Link href="https://linkedin.com/company/primedevs">
+              <Card
+                variant="outlined"
+                sx={{ width: "35px", height: "35px", borderRadius: "20px" }}
               >
-                <Linkedin
-                  height="20"
-                  width="20"
-                  strokeWidth="2"
-                  stroke={colors.green}
-                  className={styles.linkz}
-                />
-              </CardActionArea>
-            </Card>
-          </Link>
+                <CardActionArea
+                  sx={{ display: "flex", alignItems: "center", height: 1 }}
+                >
+                  <Linkedin
+                    height="20"
+                    width="20"
+                    strokeWidth="2"
+                    stroke={colors.green}
+                    className={styles.linkz}
+                  />
+                </CardActionArea>
+              </Card>
+            </Link>
+          </Stack>
         </Stack>
       </div>
     </div>

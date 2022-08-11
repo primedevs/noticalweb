@@ -1,6 +1,6 @@
 import React from "react";
 import data from "../../data/index/projects.json";
-import styles from "./Projects.module.scss";
+import styles from "../../styles/Projects.module.scss";
 import Pr from "../../components/Project/Pr";
 import { Typography } from "@mui/material";
 import Link from "next/link";
@@ -19,12 +19,7 @@ export default function index({ projects }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.projects_container}>
-        <Typography
-          variant="h4"
-          sx={{ fontWeight: 500 }}
-          gutterBottom
-          component="div"
-        >
+        <Typography variant="h4" gutterBottom component="div">
           Our work
         </Typography>
         <div className={styles.our_work_container}>

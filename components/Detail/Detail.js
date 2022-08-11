@@ -32,7 +32,7 @@ export default function Detail(props) {
             >
               <Card
                 variant="none"
-                sx={{ height: "30px", width: "30px", borderRadius: 50 }}
+                sx={{ height: "40px", width: "40px", borderRadius: 50 }}
               >
                 <CardActionArea
                   sx={{

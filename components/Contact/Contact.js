@@ -10,14 +10,9 @@ export default function Test() {
       <div className={styles.container}>
         <Card variant="none">
           <CardContent
-            sx={{ display: "flex", flexDirection: "column", rowGap: 3 }}
+            sx={{ display: "flex", flexDirection: "column", rowGap: 1 }}
           >
-            <Typography
-              variant="h4"
-              sx={{ fontWeight: 500 }}
-              gutterBottom
-              component="div"
-            >
+            <Typography variant="h4" gutterBottom component="div">
               Contact us
             </Typography>
             <Typography variant="body1" gutterBottom>

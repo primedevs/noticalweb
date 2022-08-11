@@ -20,12 +20,12 @@ export default function index(props) {
       <div className={styles.team_container}>
         <Typography
           variant="h3"
-          sx={{ fontWeight: 500, textAlign: "center" }}
+          sx={{ textAlign: "center" }}
           gutterBottom
           component="div"
         >
           Meet our team
-        </Typography>{" "}
+        </Typography>
         <Typography
           variant="subtitle1"
           gutterBottom

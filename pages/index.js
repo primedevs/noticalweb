@@ -8,7 +8,7 @@ import Link from "next/link";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Stack } from "@mui/material";
-
+import FiberManualRecordRoundedIcon from "@mui/icons-material/FiberManualRecordRounded";
 export default function Home(props) {
   return (
     <div className={styles.container}>
@@ -23,61 +23,66 @@ export default function Home(props) {
       </Head>
       <div className={styles.home_section_1}>
         <div className={styles.home_section_1_container}>
-          <Typography
-            variant="h3"
-            fontWeight={900}
-            gutterBottom
-            component="div"
-          >
-            Launch Faster With
-            <br />
+          <Stack direction="column" sx={{ alignItems: "center" }} spacing={2}>
             <Typography
-              variant="h3"
+              variant="h2"
+              gutterBottom
               component="div"
-              fontWeight={900}
-              color="primary"
+              fontWeight={700}
+              sx={{ lineHeight: 1 }}
             >
-              No code!
+              Launch faster with
+              <br />
+              <Typography
+                variant="h2"
+                component="div"
+                fontWeight={700}
+                color="primary"
+                sx={{
+                  background:
+                    "-webkit-linear-gradient(45deg, #0bdb64, #08A44B)",
+                  backgroundClip: "text",
+                  textFillColor: "transparent",
+                  display: "inline-block",
+                }}
+              >
+                no code!
+              </Typography>
             </Typography>
-          </Typography>
 
-          <Typography
-            variant="subtitle1"
-            gutterBottom
-            component="div"
-            color="#424242"
-            sx={{
-              textAlign: "center",
-              maxWidth: 600,
-              alignSelf: "center",
-            }}
-          >
-            We&apos;re a talented team of developers ready to take on your next
-            big idea. We use bubble.io to develop amazing websites and digital
-            products for startups, companies and ourselves. Want to work with an
-            awesome team and build your product? Let&apos;s talk!
-          </Typography>
-          <Link href="/projects">
-            <Button
-              size="small"
-              variant="contained"
-              disableElevation
-              sx={{ borderRadius: 2 }}
+            <Typography
+              variant="subtitle1"
+              gutterBottom
+              component="div"
+              color="#424242"
+              sx={{
+                textAlign: "center",
+                maxWidth: 600,
+                alignSelf: "center",
+              }}
             >
-              Explore Our Work
-            </Button>
-          </Link>
+              We&apos;re a talented team of developers ready to take on your
+              next big idea. We use bubble.io to develop amazing websites and
+              digital products for startups, companies and ourselves. Want to
+              work with an awesome team and build your product? Let&apos;s talk!
+            </Typography>
+            <Link href="/projects">
+              <Button
+                size="small"
+                variant="contained"
+                disableElevation
+                sx={{ borderRadius: 2 }}
+              >
+                Explore Our Work
+              </Button>
+            </Link>
+          </Stack>
         </div>
       </div>
       <div className={styles.home_section_2}>
         <div className={styles.home_section_2_container}>
-          <Typography
-            variant="h4"
-            sx={{ fontWeight: 500 }}
-            gutterBottom
-            component="div"
-          >
-            Here&apos;s what you can build
+          <Typography variant="h4" gutterBottom component="div">
+            What you can build?
           </Typography>
 
           <div className={styles.services_container}>
@@ -94,12 +99,7 @@ export default function Home(props) {
             justifyContent="space-between"
             alignItems="center"
           >
-            <Typography
-              variant="h4"
-              sx={{ fontWeight: 500 }}
-              gutterBottom
-              component="div"
-            >
+            <Typography variant="h4" gutterBottom component="div">
               Our work
             </Typography>
             <Link href="/projects">
@@ -129,46 +129,56 @@ export default function Home(props) {
       </div>
       <div className={styles.home_section_4}>
         <div className={styles.home_section_4_container}>
-          <div className={styles.available_for_projects}>
-            <div> </div>
-            <Typography
-              color="text.primary.300"
-              fontWeight={300}
-              variant="body2"
-            >
-              AVAILABLE FOR FREELANCE PROJECTS
-            </Typography>
-          </div>
+          <Stack direction="column" alignItems="center">
+            <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
+              <FiberManualRecordRoundedIcon
+                sx={{ color: "#08A44B", height: "20px", width: "20px" }}
+              />
+              <Typography
+                color="text.primary.300"
+                fontWeight={300}
+                variant="body2"
+              >
+                AVAILABLE FOR FREELANCE PROJECTS
+              </Typography>
+            </Stack>
 
-          <Typography
-            textAlign="center"
-            variant="h3"
-            gutterBottom
-            component="div"
-            fontWeight={800}
-          >
-            Need help with your
-            <br />
             <Typography
-              variant="h3"
+              textAlign="center"
+              variant="h2"
               gutterBottom
               component="div"
-              fontWeight={800}
-              color="primary"
+              fontWeight={700}
             >
-              Bubble project?
-            </Typography>{" "}
-          </Typography>
-          <Link href="https://calendly.com/primedevs/bubble-development">
-            <Button
-              size="small"
-              variant="contained"
-              disableElevation
-              sx={{ borderRadius: 2 }}
-            >
-              Schedule a Call
-            </Button>
-          </Link>
+              Need help with your
+              <br />
+              <Typography
+                variant="h2"
+                gutterBottom
+                component="div"
+                fontWeight={700}
+                sx={{
+                  background:
+                    "-webkit-linear-gradient(45deg, #0bdb64, #08A44B)",
+                  backgroundClip: "text",
+                  textFillColor: "transparent",
+                  display: "inline-block",
+                }}
+              >
+                Bubble project?
+              </Typography>
+            </Typography>
+            <Link href="https://calendly.com/primedevs/bubble-development">
+              <Button
+                size="small"
+                variant="contained"
+                disableElevation
+                sx={{ borderRadius: 2, display: "inline-block" }}
+              >
+                Schedule a Call
+              </Button>
+            </Link>
+          </Stack>
         </div>
       </div>
     </div>

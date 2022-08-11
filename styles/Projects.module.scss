@@ -1,8 +1,7 @@
-@import "../../styles/screens/screens.scss";
-@import "../../styles/elements/button";
-@import "../../styles/colors/colors";
-@import "../../styles/elements/text";
-
+@import "./styles/screens/screens.scss";
+@import "./styles/elements/button";
+@import "./styles/colors/colors";
+@import "./styles/elements/text";
 
 .projects {
   padding-top: 50px;
@@ -17,7 +16,7 @@
     max-width: 1160px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
   }
   h4 {
     @include h5();
