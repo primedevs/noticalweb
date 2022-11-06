@@ -38,12 +38,21 @@ export default function Test() {
           <CardContent
             sx={{ display: "flex", flexDirection: "column", rowGap: 1 }}
           >
-            <Typography variant="h4" gutterBottom component="div">
+            <Typography
+              variant="h4"
+              gutterBottom
+              component="div"
+              sx={{ textAlign: "center" }}
+            >
               Contact us
             </Typography>
-            <Typography variant="body1" gutterBottom>
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
+            <Typography
+              variant="body2"
+              gutterBottom
+              sx={{ textAlign: "center" }}
+            >
+              Do you want your product to be the next top app? We'd love to hear
+              from you.
             </Typography>
             <TextField
               id="outlined-basic"
