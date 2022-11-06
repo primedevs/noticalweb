@@ -50,7 +50,7 @@ const Navbar = () => {
             <Link href="/">
               <Image
                 onClick={handleClickLogo}
-                src={"/logo.avif"}
+                src={"/logo.png"}
                 layout={"fill"}
                 objectFit={"contain"}
               />
