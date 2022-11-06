@@ -138,8 +138,9 @@ export default function Home(props) {
                 color="text.primary.300"
                 fontWeight={300}
                 variant="body2"
+                fontSize={13}
               >
-                AVAILABLE FOR FREELANCE PROJECTS
+                AVAILABLE FOR FREELANCE PROJECTS AND PARTNERSHIPS
               </Typography>
             </Stack>
 

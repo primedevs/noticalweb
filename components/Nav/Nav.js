@@ -50,7 +50,7 @@ const Navbar = () => {
             <Link href="/">
               <Image
                 onClick={handleClickLogo}
-                src={"/logo.png"}
+                src={"/logo.avif"}
                 layout={"fill"}
                 objectFit={"contain"}
               />
@@ -59,18 +59,6 @@ const Navbar = () => {
 
           <div className={menuClasses()}>
             <ul>
-              <li>
-                <Link href="/team">
-                  <Button
-                    variant="text"
-                    onClick={handleClick}
-                    color="secondary"
-                    sx={{ borderRadius: 2 }}
-                  >
-                    Team
-                  </Button>
-                </Link>
-              </li>
               <li>
                 <Link href="/contact">
                   <Button
