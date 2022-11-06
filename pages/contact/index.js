@@ -5,12 +5,12 @@ export default function contact() {
   return (
     <>
       <Head>
-        <title>Contact us</title>
+        <title>Contact Us</title>
         <meta
           name="description"
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
+          content="Send us a message. We'd like to hear from you."
         />
-        <meta property="og:url" content="https://www.primedevs.co/team" />
+        <meta property="og:url" content="https://www.primedevs.co/contact" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Contact />
