@@ -51,8 +51,9 @@ export default function Test() {
               gutterBottom
               sx={{ textAlign: "center" }}
             >
-              Do you want your product to be the next top app? We'd love to hear
-              from you.
+              Thank you for considering our no-code development services, please
+              fill out the form below with as much detail as possible and we
+              will respond promptly to discuss your project further.
             </Typography>
             <TextField
               id="outlined-basic"
