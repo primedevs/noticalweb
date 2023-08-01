@@ -4,8 +4,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import toast, { Toaster } from "react-hot-toast";
 import { Card, CardContent, Typography } from "@mui/material";
-const notify = () =>
-  toast("Your email was sent. We will reach out to you shortly");
+
 export default function Test() {
   const [values, setValues] = useState({
     name: "",
@@ -15,7 +14,13 @@ export default function Test() {
   const { name, email, message } = values;
   const handleChange = (e) =>
     setValues({ ...values, [e.target.name]: e.target.value });
-  const handleSubmit = async (e) => {
+  const handleSubmit = async () => {
+    if (!name || !email || !message) {
+      // Check if required fields are empty
+      toast.error("Please fill out all the required fields.");
+      return;
+    }
+
     await fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -28,8 +33,19 @@ export default function Test() {
       email: "",
       message: "",
     });
-    notify;
+    notify();
   };
+
+  const notify = () => {
+    toast.success(
+      "Your message has been sent successfully. We will reach out to you shortly. Thank you for considering our services!"
+    );
+  };
+
+  const isRequiredFieldEmpty = (field) => {
+    return !field.trim();
+  };
+
   return (
     <div className={styles.contact}>
       <Toaster />
@@ -58,42 +74,57 @@ export default function Test() {
             <TextField
               id="outlined-basic"
               name="name"
-              label="Full Name"
+              label="Full Name *"
               variant="outlined"
               size="small"
               type="text"
               value={name}
               onChange={handleChange}
+              sx={{
+                borderRadius: 10,
+                borderColor: isRequiredFieldEmpty(name) ? "red" : "inherit",
+              }}
             />
             <TextField
               id="outlined-basic"
               name="email"
-              label="Email"
+              label="Email *"
               variant="outlined"
               size="small"
               type="email"
               value={email}
               onChange={handleChange}
+              sx={{
+                borderRadius: 10,
+                borderColor: isRequiredFieldEmpty(email) ? "red" : "inherit",
+              }}
             />
             <TextField
               id="outlined-textarea"
               name="message"
-              label="Your message"
+              label="Your message *"
               placeholder="Placeholder"
               multiline
               minRows={4}
               value={message}
               onChange={handleChange}
+              sx={{
+                borderRadius: 2,
+                marginBottom: "20px",
+                borderColor: isRequiredFieldEmpty(message) ? "red" : "inherit",
+              }}
             />
             <Button
               size="medium"
               variant="contained"
               disableElevation
-              sx={{ borderRadius: 2 }}
-              onClick={() => {
-                handleSubmit();
-                notify();
+              sx={{
+                borderRadius: 2,
+                width: "fit-content",
+                marginTop: "20px",
+                margin: "0 auto",
               }}
+              onClick={handleSubmit}
             >
               Send Message
             </Button>

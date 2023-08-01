@@ -68,7 +68,7 @@ export default function Home(props) {
             </Typography>
             <Link href="/projects">
               <Button
-                size="small"
+                size="medium"
                 variant="contained"
                 disableElevation
                 sx={{ borderRadius: 2 }}
