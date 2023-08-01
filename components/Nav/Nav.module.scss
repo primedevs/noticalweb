@@ -1,3 +1,4 @@
+// Nav.module.scss
 @import "../../styles/screens/screens.scss";
 @import "../../styles/elements/button";
 @import "../../styles/colors/colors";
@@ -36,6 +37,7 @@
     }
     .menu__mobile {
       cursor: pointer;
+      transition: transform 0.3s ease; /* Add transition property for the hamburger icon */
     }
     @include for-tablet-portrait-up {
       .menu__mobile {
@@ -51,7 +53,6 @@
       justify-content: center;
       align-items: center;
 
-   
       @include for-phone-only {
         display: flex;
         flex-direction: column;
@@ -122,4 +123,19 @@
       }
     }
   }
+}
+
+/* Define the hamburger spin animation */
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+/* Apply the spin animation to the hamburger icon when menu is toggled */
+.menu__mobile.spin {
+  animation: spin 0.2s ease;
 }

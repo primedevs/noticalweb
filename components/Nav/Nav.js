@@ -1,3 +1,4 @@
+// Navbar.js
 import React, { useState, useEffect } from "react";
 import styles from "./Nav.module.scss";
 import Image from "next/image";
@@ -5,6 +6,7 @@ import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import { Button } from "@mui/material";
 import Link from "next/link";
+
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const [width, setWidth] = useState();
@@ -24,9 +26,15 @@ const Navbar = () => {
   };
 
   const menuIcon = menu ? (
-    <CloseRoundedIcon onClick={handleClick} className={styles.menu__mobile} />
+    <CloseRoundedIcon
+      onClick={handleClick}
+      className={`${styles.menu__mobile} ${styles.spin}`}
+    />
   ) : (
-    <MenuRoundedIcon onClick={handleClick} className={styles.menu__mobile} />
+    <MenuRoundedIcon
+      onClick={handleClick}
+      className={styles.menu__mobile}
+    />
   );
 
   useEffect(() => {
@@ -42,11 +50,20 @@ const Navbar = () => {
     }
   }, [width]);
 
+  const [slideAnimation, setSlideAnimation] = useState("");
+
+  const handleMenuToggle = () => {
+    setMenu((prevMenu) => !prevMenu);
+    setSlideAnimation((prevAnimation) =>
+      menu ? "slide-in" : prevAnimation ? "slide-out" : ""
+    );
+  };
+
   return (
     <div>
-      <div className={styles.navbar}>
-        <div className={styles.container}>
-          <div className={styles.container__logo}>
+      <div className={`${styles.navbar}`}>
+        <div className={`${styles.container}`}>
+          <div className={`${styles.container__logo}`}>
             <Link href="/">
               <Image
                 onClick={handleClickLogo}
@@ -57,7 +74,10 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className={menuClasses()}>
+          <div
+            className={`${menuClasses()} ${slideAnimation}`}
+            onAnimationEnd={() => setSlideAnimation("")}
+          >
             <ul>
               <li>
                 <Link href="/contact">
