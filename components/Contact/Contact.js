@@ -60,16 +60,15 @@ export default function Test() {
               component="div"
               sx={{ textAlign: "center" }}
             >
-              Contact us
+              Contact Us
             </Typography>
             <Typography
               variant="body2"
               gutterBottom
-              sx={{ textAlign: "center" }}
+              sx={{ textAlign: "center", marginBottom: "20px" }}
             >
-              Thank you for considering our no-code development services, please
-              fill out the form below with as much detail as possible and we
-              will respond promptly to discuss your project further.
+              We’d love to hear from you! Please fill out the form below and
+              we’ll get back to you as soon as possible.
             </Typography>
             <TextField
               id="outlined-basic"
@@ -109,7 +108,7 @@ export default function Test() {
               value={message}
               onChange={handleChange}
               sx={{
-                borderRadius: 2,
+                borderRadius: 10,
                 marginBottom: "20px",
                 borderColor: isRequiredFieldEmpty(message) ? "red" : "inherit",
               }}

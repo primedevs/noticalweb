@@ -9,7 +9,7 @@
   height: 40px;
   padding-left: 10px;
   padding-right: 10px;
-  border-radius: 10px;
+  border-radius: 10px !important;
   border: 1px solid $grey_500;
   color: $green_main();
   transition: all 1000 ease;
