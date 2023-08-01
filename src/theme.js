@@ -1,6 +1,8 @@
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
+
 let theme = createTheme({
   typography: {
+    fontFamily: "'Muli', sans-serif", // Set the font-family to Urbanist
     button: {
       textTransform: "none",
       textDecoration: "none",
@@ -11,5 +13,6 @@ let theme = createTheme({
     secondary: { main: "#0B1929" },
   },
 });
+
 theme = responsiveFontSizes(theme);
 export default theme;
