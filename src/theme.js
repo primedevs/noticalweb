@@ -9,8 +9,12 @@ let theme = createTheme({
     },
   },
   palette: {
-    primary: { 500: "#04A54A" },
-    secondary: { main: "#0B1929" },
+    primary: {
+      main: '#0276aa', // Black color for primary
+    },
+    secondary: {
+      main: '#333333', // Dark grey color for secondary
+    },
   },
   components: {
     MuiInputBase: {

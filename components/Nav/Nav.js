@@ -67,7 +67,7 @@ const Navbar = () => {
             <Link href="/">
               <Image
                 onClick={handleClickLogo}
-                src={"/logo.png"}
+                src={"/logo.svg"}
                 layout={"fill"}
                 objectFit={"contain"}
               />
@@ -87,7 +87,7 @@ const Navbar = () => {
                     color="secondary"
                     sx={{ borderRadius: 2 }}
                   >
-                    Contact
+                    CONTACT US
                   </Button>
                 </Link>
               </li>
@@ -101,7 +101,7 @@ const Navbar = () => {
                     disableElevation
                     sx={{ borderRadius: 2 }}
                   >
-                    Projects
+                    LOGIN
                   </Button>
                 </Link>
               </li>

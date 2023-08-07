@@ -6,19 +6,18 @@ import Ser from "../components/Service/Ser";
 import Pr from "../components/Project/Pr";
 import Link from "next/link";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import { Stack } from "@mui/material";
+import { Stack, Button } from "@mui/material";
 import FiberManualRecordRoundedIcon from "@mui/icons-material/FiberManualRecordRounded";
 export default function Home(props) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Primedevs</title>
+        <title>Notycal</title>
         <meta
           name="description"
           content="Launch faster with no-code tools. It saves you time, money & gives a professional finish."
         />
-        <meta property="og:url" content="https://www.primedevs.co" />
+        <meta property="og:url" content="https://www.notycal.com" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.home_section_1}>
@@ -28,25 +27,25 @@ export default function Home(props) {
               variant="h2"
               gutterBottom
               component="div"
-              fontWeight={700}
+              fontWeight={500}
               sx={{ lineHeight: 1 }}
             >
-              Launch faster with
+              Sync Notion Tasks & Google Calendar
               <br />
               <Typography
                 variant="h2"
                 component="div"
-                fontWeight={700}
+                fontWeight={500}
                 color="primary"
                 sx={{
                   background:
-                    "-webkit-linear-gradient(45deg, #0bdb64, #08A44B)",
+                    "-webkit-linear-gradient(45deg, #027ab0, #1cb7fc)",
                   backgroundClip: "text",
                   textFillColor: "transparent",
                   display: "inline-block",
                 }}
               >
-                no code!
+                Effortlessly!
               </Typography>
             </Typography>
 
@@ -55,17 +54,14 @@ export default function Home(props) {
               gutterBottom
               component="div"
               color="#424242"
+              fontSize={18}
               sx={{
                 textAlign: "center",
                 maxWidth: 600,
                 alignSelf: "center",
               }}
             >
-              We&apos;re a talented team of developers ready to take on your
-              next big idea. We use bubble.io to develop amazing websites and
-              digital products for startups, companies and ourselves. Want to
-              work with an awesome team and build your product? Let&apos;s talk!
-            </Typography>
+              Notycal is a dynamic integration tool designed to seamlessly connect your Notion workspace with your Google Calendar. It empowers you to edit and manage your Notion tasks straight from your Google Calendar interface. With Notycal, balancing your schedule and tasks becomes more efficient than ever before.            </Typography>
             <Link href="/projects">
               <Button
                 size="medium"
@@ -73,7 +69,7 @@ export default function Home(props) {
                 disableElevation
                 sx={{ borderRadius: 2 }}
               >
-                Explore Our Work
+                TRY NOTYCAL
               </Button>
             </Link>
           </Stack>
