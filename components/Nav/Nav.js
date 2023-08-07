@@ -92,7 +92,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/projects">
+                <Link href="https://app.notycal.com/">
                   <Button
                     variant="contained"
                     onClick={handleClick}
