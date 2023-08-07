@@ -62,7 +62,7 @@ export default function Home(props) {
               }}
             >
               Notycal is a dynamic integration tool designed to seamlessly connect your Notion workspace with your Google Calendar. It empowers you to edit and manage your Notion tasks straight from your Google Calendar interface. With Notycal, balancing your schedule and tasks becomes more efficient than ever before.            </Typography>
-            <Link href="/projects">
+            <Link href="https://app.notycal.com/">
               <Button
                 size="medium"
                 variant="contained"
