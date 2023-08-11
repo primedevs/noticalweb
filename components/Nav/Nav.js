@@ -92,7 +92,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link href="https://app.notycal.com/">
+                <Link href="https://ewafdimto0k.typeform.com/to/mLRueGpR">
                   <Button
                     variant="contained"
                     onClick={handleClick}

@@ -15,7 +15,7 @@ export default function Home(props) {
         <title>Notycal</title>
         <meta
           name="description"
-          content="Launch faster with no-code tools. It saves you time, money & gives a professional finish."
+          content="Sync Notion & Google Calendar Like Magic!"
         />
         <meta property="og:url" content="https://www.notycal.com" />
         <link rel="icon" href="/favicon.ico" />
@@ -63,7 +63,7 @@ export default function Home(props) {
               }}
             >
               Notycal is a dynamic integration tool designed to seamlessly connect your Notion workspace with your Google Calendar. It empowers you to edit and manage your Notion tasks straight from your Google Calendar interface. With Notycal, balancing your schedule and tasks becomes more efficient than ever before.            </Typography>
-            <Link href="https://app.notycal.com/">
+            <Link href="https://ewafdimto0k.typeform.com/to/mLRueGpR">
               <Button
                 size="medium"
                 variant="contained"
@@ -135,7 +135,7 @@ export default function Home(props) {
                 Join Today!
               </Typography>
             </Typography>
-            <Link href="https://calendly.com/primedevs/bubble-development">
+            <Link href="https://ewafdimto0k.typeform.com/to/mLRueGpR">
               <Button
                 size="medium"
                 variant="contained"
