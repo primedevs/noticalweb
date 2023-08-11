@@ -4,10 +4,10 @@ import serviceData from "../data/index/services.json";
 import projectData from "../data/index/projects.json";
 import Ser from "../components/Service/Ser";
 import Pr from "../components/Project/Pr";
+import Faq from "../components/Faq/Faq";
 import Link from "next/link";
 import Typography from "@mui/material/Typography";
 import { Stack, Button } from "@mui/material";
-import FiberManualRecordRoundedIcon from "@mui/icons-material/FiberManualRecordRounded";
 export default function Home(props) {
   return (
     <div className={styles.container}>
@@ -27,17 +27,18 @@ export default function Home(props) {
               variant="h2"
               gutterBottom
               component="div"
-              fontWeight={500}
+              fontWeight={700}
               sx={{ lineHeight: 1 }}
             >
-              Sync Notion Tasks & Google Calendar
-              <br />
+              Sync Notion & Google Calendar&nbsp;
+
               <Typography
                 variant="h2"
                 component="div"
-                fontWeight={500}
+                fontWeight={700}
                 color="primary"
                 sx={{
+
                   background:
                     "-webkit-linear-gradient(45deg, #027ab0, #1cb7fc)",
                   backgroundClip: "text",
@@ -45,7 +46,7 @@ export default function Home(props) {
                   display: "inline-block",
                 }}
               >
-                Effortlessly!
+                Like Magic!
               </Typography>
             </Typography>
 
@@ -69,7 +70,7 @@ export default function Home(props) {
                 disableElevation
                 sx={{ borderRadius: 2 }}
               >
-                TRY NOTYCAL
+                JOIN WAITLIST
               </Button>
             </Link>
           </Stack>
@@ -78,7 +79,7 @@ export default function Home(props) {
       <div className={styles.home_section_2}>
         <div className={styles.home_section_2_container}>
           <Typography variant="h4" gutterBottom component="div">
-            What you can build?
+            Why Use Notycal?
           </Typography>
 
           <div className={styles.services_container}>
@@ -96,83 +97,52 @@ export default function Home(props) {
             alignItems="center"
           >
             <Typography variant="h4" gutterBottom component="div">
-              Our work
+              FAQs
             </Typography>
-            <Link href="/projects">
-              <Typography
-                variant="body1"
-                gutterBottom
-                sx={{ cursor: "pointer" }}
-              >
-                See more 👉
-              </Typography>
-            </Link>
+
           </Stack>
 
           <div className={styles.our_work_container}>
-            {props.projects.map((project) => (
-              <Link
-                href={`/project/${project._id}`}
-                key={project._id.toString()}
-              >
-                <a>
-                  <Pr project={project} />
-                </a>
-              </Link>
-            ))}
+            <Faq />
           </div>
         </div>
       </div>
       <div className={styles.home_section_4}>
         <div className={styles.home_section_4_container}>
           <Stack direction="column" alignItems="center">
-            <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
-              <FiberManualRecordRoundedIcon
-                sx={{ color: "#08A44B", height: "20px", width: "20px" }}
-              />
-              <Typography
-                color="text.primary.300"
-                fontWeight={300}
-                variant="body2"
-                fontSize={12}
-              >
-                AVAILABLE FOR FREELANCE PROJECTS AND PARTNERSHIPS
-              </Typography>
-            </Stack>
 
             <Typography
               textAlign="center"
-              variant="h2"
+              variant="h4"
               gutterBottom
               component="div"
               fontWeight={700}
             >
-              Need help with your
-              <br />
+              Sync Notion & Google Calendar.&nbsp;
               <Typography
-                variant="h2"
+                variant="h4"
                 gutterBottom
                 component="div"
                 fontWeight={700}
                 sx={{
                   background:
-                    "-webkit-linear-gradient(45deg, #0bdb64, #08A44B)",
+                    "-webkit-linear-gradient(45deg, #027ab0, #1cb7fc)",
                   backgroundClip: "text",
                   textFillColor: "transparent",
                   display: "inline-block",
                 }}
               >
-                Bubble project?
+                Join Today!
               </Typography>
             </Typography>
             <Link href="https://calendly.com/primedevs/bubble-development">
               <Button
-                size="small"
+                size="medium"
                 variant="contained"
                 disableElevation
-                sx={{ borderRadius: 2, display: "inline-block" }}
+                sx={{ borderRadius: 2 }}
               >
-                Schedule a Call
+                JOIN WAITLIST
               </Button>
             </Link>
           </Stack>

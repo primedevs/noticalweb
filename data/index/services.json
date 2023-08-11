@@ -2,7 +2,7 @@
   {
       "_id": "1",
       "Icon": "🔄",
-      "Title": "Real-Time Two-Way Synchronization",
+      "Title": "Two-Way Synchronization",
       "Description": "Notycal seamlessly syncs your Notion tasks with your Google Calendar, ensuring any updates or changes made in one platform will be reflected in the other. This keeps both your Notion and Google Calendar in perfect harmony."
   },
   {

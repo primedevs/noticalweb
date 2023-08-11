@@ -1,0 +1,51 @@
+[
+    {
+      "question": "What is Notycal?",
+      "answer": "Notycal is a dynamic integration tool designed to seamlessly connect your Notion workspace with your Google Calendar. It allows you to edit and manage your Notion tasks directly from your Google Calendar interface."
+    },
+    {
+      "question": "How does Notycal work?",
+      "answer": "Notycal offers real-time two-way synchronization between your Notion tasks and Google Calendar. Any updates or changes made in either platform are automatically reflected in the other, ensuring perfect harmony between your Notion and Google Calendar."
+    },
+    {
+      "question": "What is the benefit of using Notycal's customizable sync range?",
+      "answer": "With Notycal, you have the flexibility to choose a specific date range for which tasks should be synced to your Google Calendar. This feature helps you focus on tasks that are relevant within your specified timeline, keeping your Google Calendar organized and clutter-free."
+    },
+    {
+      "question": "Can I select which Notion databases to integrate with Google Calendar?",
+      "answer": "Absolutely. Notycal allows you to choose the specific Notion databases you want to sync with your Google Calendar. This feature ensures that you only see the tasks that matter the most to you in your calendar view."
+    },
+    {
+      "question": "How does Notycal manage completed tasks?",
+      "answer": "Notycal enables automatic deletion of completed tasks from your Google Calendar. This ensures that your calendar remains organized and provides a clear view of the tasks that are still pending."
+    },
+    {
+      "question": "Can I choose the Google Calendar where my tasks are included?",
+      "answer": "Yes, you can. Notycal provides the option to specify the Google Calendar where you'd like your Notion tasks to be included. If the specified calendar doesn't exist, a dedicated 'Notion' calendar will be created by default."
+    },
+    {
+      "question": "Is Notycal easy to set up and use?",
+      "answer": "Absolutely. Notycal features an intuitive interface and a simple setup process. You can integrate it seamlessly into your workflow with just a few clicks, making task management efficient and hassle-free."
+    },
+    {
+      "question": "How can Notycal benefit me?",
+      "answer": "Notycal empowers you to manage your Notion tasks from within your Google Calendar, saving you time and effort in toggling between platforms. Its features, such as real-time synchronization, customizable sync range, and selective database integration, help you maintain an organized and efficient schedule."
+    },
+    {
+      "question": "Is there a trial period for using Notycal?",
+      "answer": "For information regarding trial periods, pricing, and subscription plans, please visit our official website or contact our support team."
+    },
+    {
+      "question": "How do I get started with Notycal?",
+      "answer": "To get started with Notycal, visit our website and follow the simple setup instructions provided. If you encounter any issues or have questions during the setup process, our support team is ready to assist you."
+    },
+    {
+      "question": "Can I provide feedback or suggest features for Notycal?",
+      "answer": "We welcome your feedback and suggestions for improving Notycal. Feel free to reach out to our support team or visit our website to share your thoughts."
+    },
+    {
+      "question": "Is my data secure when using Notycal?",
+      "answer": "We take data security seriously. Notycal uses industry-standard security practices to ensure the protection of your data during synchronization between Notion and Google Calendar. Your privacy and data security are our top priorities."
+    }
+  ]
+  

@@ -22,7 +22,7 @@ export default function Footer() {
             Let&apos;s Connect
           </Typography>
 
-          <Link href="https://twitter.com/primedevsco">
+          <Link href="https://twitter.com/notionerr">
             <Card
               variant="outlined"
               sx={{ width: "35px", height: "35px", borderRadius: "10px" }}
@@ -34,7 +34,7 @@ export default function Footer() {
                   height="20"
                   width="20"
                   strokeWidth="2"
-                  stroke={colors.green}
+                  stroke="#0276aa"
                   className={styles.linkz}
                 />
               </CardActionArea>

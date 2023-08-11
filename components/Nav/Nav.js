@@ -101,7 +101,7 @@ const Navbar = () => {
                     disableElevation
                     sx={{ borderRadius: 2 }}
                   >
-                    LOGIN
+                     JOIN WAITLIST
                   </Button>
                 </Link>
               </li>
