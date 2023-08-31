@@ -25,11 +25,6 @@ const renderRichText = (node) => {
 export default function Index() {
   const privacyPolicy = [
     {
-      type: 'heading',
-      level: 1,
-      children: [{ text: 'Privacy Policy' }],
-    },
-    {
       type: 'paragraph',
       children: [
         {
